@@ -14,12 +14,20 @@ Você está desenvolvendo um novo App, que tem a habilidade de fazer um _analyti
  	- Usuário deslogado tentando acessar a página logada
   	- Após o logout
 
-Obs. será necessário criar um _App OAuth_ no GitHub. 
+> [!Tip]
+> Obs. será necessário criar um _App OAuth_ no GitHub.  
+> Obs1. A estratégia de login do NextAuth deverá ser a de `jwt` (e não `database`). Isso significa que as informações do usuário logado serão persistidas no token, e não na base de dados. 
+
 
 ### Criando um App OAuth no GitHub:
 - A página de Apps OAuth está [nesse link](https://github.com/settings/developers)
 - Veja detalhes nesse [guia do GitHub](https://docs.github.com/pt/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app)
 
+### Informações adicionais do GitHub
+
+Por padrão o NextAuth.js traz apenas algumas informações do usuário na sessão: _name_, _image_, _email_. 
+Mas ao analisarmos o figma do nosso projeto, algumas informações adicionais são necessárias, como quantidade de repositórios, gists e seguidores. 
+Para que você consiga acessar essas informações será necessário utilizar as _callbacks_ do NextAuth.js. Mais [infos aqui](https://next-auth.js.org/configuration/callbacks).
 
 ## 🎨 Design Sugerido
 
