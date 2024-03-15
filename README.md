@@ -14,7 +14,7 @@ Você está desenvolvendo um novo App, que tem a habilidade de fazer um _analyti
  	- Usuário deslogado tentando acessar a página logada
   	- Após o logout
 
-> [!Tip] 
+> [!Tip]  
 > Obs. será necessário criar um _App OAuth_ no GitHub.  
 > Obs1. A estratégia de login do NextAuth deverá ser a de `jwt` (e não `database`). Isso significa que as informações do usuário logado serão persistidas no token, e não na base de dados. 
 
